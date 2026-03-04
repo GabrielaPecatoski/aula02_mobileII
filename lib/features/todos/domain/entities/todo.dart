@@ -3,11 +3,7 @@ class Todo {
   final String title;
   final bool completed;
 
-  const Todo({
-    required this.id,
-    required this.title,
-    required this.completed,
-  });
+  const Todo({required this.id, required this.title, required this.completed});
 
   Todo copyWith({int? id, String? title, bool? completed}) {
     return Todo(

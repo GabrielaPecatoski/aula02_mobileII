@@ -30,7 +30,10 @@ class _AddTodoDialogState extends State<AddTodoDialog> {
         onSubmitted: (_) => _ok(),
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancelar')),
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: const Text('Cancelar'),
+        ),
         ElevatedButton(onPressed: _ok, child: const Text('Salvar')),
       ],
     );

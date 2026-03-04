@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../widgets/add_todo_dialog.dart';
 import '../viewmodels/todo_viewmodel.dart';
+import '../widgets/add_todo_dialog.dart';
 
 class TodosPage extends StatefulWidget {
   const TodosPage({super.key});
@@ -31,8 +31,10 @@ class _TodosPageState extends State<TodosPage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
-            onPressed: vm.isLoading ? null : () => vm.loadTodos(forceRefresh: true),
-          )
+            onPressed: vm.isLoading
+                ? null
+                : () => vm.loadTodos(forceRefresh: true),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
